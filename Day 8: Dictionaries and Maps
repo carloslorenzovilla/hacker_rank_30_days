@@ -1,0 +1,16 @@
+n = int(input())
+phonebook = {}
+
+for i in range(n):
+    entry = list(input().rstrip().split())
+    phonebook[entry[0]] = entry[1]
+
+while True:
+    try:
+        name = input()
+        if name in phonebook:
+            print(f"{name}={phonebook[name]}")
+        else:
+            print("Not found")
+    except:
+        break
